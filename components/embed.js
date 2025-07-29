@@ -36,7 +36,7 @@ export const NostrEmbed = memo(function NostrEmbed ({ src, className, topLevel, 
     window?.addEventListener('message', setHeightFromIframe)
 
     const handleIframeLoad = () => {
-      iframeRef.current.contentWindow.postMessage({ setDarkMode: darkMode }, '*')
+      iframeRef.current.contentWindow.postMessage({ setDarkMode: darkMode }, 'https://njump.me')
     }
 
     if (iframeRef.current.complete) {
